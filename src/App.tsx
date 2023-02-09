@@ -1,5 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { CouponHeader } from "./components/Coupon/CouponHeader";
+import { CouponModal } from "./components/Coupon/CouponModal";
 import { CouponTableHeader } from "./components/Coupon/CouponTableHeader";
 import { CoupoTableItem } from "./components/Coupon/CoupoTableItem";
 
@@ -10,7 +11,7 @@ function App() {
 				w="full"
 				maxW="1200px"
 				bg="white"
-			  maxH="700px"
+				maxH="700px"
 				borderRadius="1rem"
 				mx="auto"
 				mt="5rem"
@@ -32,6 +33,8 @@ function App() {
 				<CoupoTableItem />
 				<CoupoTableItem />
 			</Flex>
+
+			<CouponModal />
 		</Flex>
 	);
 }

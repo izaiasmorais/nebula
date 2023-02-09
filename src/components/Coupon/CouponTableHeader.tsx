@@ -7,6 +7,7 @@ export function CouponTableHeader() {
 			border="none"
 			overflow="hidden"
 			mt="2.5rem"
+			mb="1rem"
 			justifyContent="space-between"
 			borderRadius=".5rem"
 			fontWeight="600"
