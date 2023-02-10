@@ -27,10 +27,12 @@ export function CouponModal() {
 				</ModalBody>
 
 				<ModalFooter display="flex" gap=".5rem">
-					<Button colorScheme="red">Cancelar</Button>
+					<Button colorScheme="red" onClick={onClose}>
+						Cancelar
+					</Button>
 
 					<Button colorScheme="purple" mr={3}>
-						Close
+						Avançar
 					</Button>
 				</ModalFooter>
 			</ModalContent>

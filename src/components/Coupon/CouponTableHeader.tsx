@@ -1,27 +1,26 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, SimpleGrid, Text } from "@chakra-ui/react";
 
 export function CouponTableHeader() {
 	return (
-		<Flex
+		<SimpleGrid
 			bg="#F1F5F9"
-			border="none"
-			overflow="hidden"
 			mt="2.5rem"
 			mb="1rem"
-			justifyContent="space-between"
+			alignItems="center"
 			borderRadius=".5rem"
 			fontWeight="600"
-			px="2rem"
-			py=".5rem"
+			p="1rem"
+			gap="2rem"
+			gridTemplateColumns="repeat(8, 1fr)"
 		>
-			<Text>Código</Text>
-			<Text>Tipo</Text>
-			<Text>Valor</Text>
-			<Text>Total</Text>
-			<Text>Disponível</Text>
-			<Text>Ativo</Text>
-			<Text>Editar</Text>
-			<Text>Excluir</Text>
-		</Flex>
+			<Flex w="230px">Código</Flex>
+			<Flex>Tipo</Flex>
+			<Flex>Valor</Flex>
+			<Flex>Total</Flex>
+			<Flex>Disponível</Flex>
+			<Flex>Ativo</Flex>
+			<Flex>Editar</Flex>
+			<Flex>Excluir</Flex>
+		</SimpleGrid>
 	);
 }

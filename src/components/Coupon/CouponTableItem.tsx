@@ -1,19 +1,17 @@
-import { Button, Flex, Switch, Text } from "@chakra-ui/react";
+import { Button, Flex, SimpleGrid, Switch, Text } from "@chakra-ui/react";
 import { PencilSimple, Trash } from "phosphor-react";
 
 export function CoupoTableItem() {
 	return (
-		<Flex
-			border="none"
-			overflow="hidden"
-			justifyContent="space-between"
-			borderRadius=".5rem"
-			fontWeight="600"
+		<SimpleGrid
 			color="#64748B"
-			px="2rem"
-			py="1rem"
+			alignItems="center"
+			fontWeight="600"
+			p="1rem"
+			gap="2rem"
+			gridTemplateColumns="repeat(8, 1fr)"
 		>
-			<Flex>SEGUNDOU100OFF</Flex>
+			<Flex w="230px">SEGUNDOU100OFF</Flex>
 			<Flex>Percentual</Flex>
 			<Flex>R$ 25,00</Flex>
 			<Flex>25</Flex>
@@ -43,6 +41,6 @@ export function CoupoTableItem() {
 					leftIcon={<Trash size={20} />}
 				/>
 			</Flex>
-		</Flex>
+		</SimpleGrid>
 	);
 }

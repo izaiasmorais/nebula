@@ -2,11 +2,11 @@ import { Flex, Text } from "@chakra-ui/react";
 import { CouponHeader } from "./components/Coupon/CouponHeader";
 import { CouponModal } from "./components/Coupon/CouponModal";
 import { CouponTableHeader } from "./components/Coupon/CouponTableHeader";
-import { CoupoTableItem } from "./components/Coupon/CoupoTableItem";
+import { CoupoTableItem } from "./components/Coupon/CouponTableItem";
 
 function App() {
 	return (
-		<Flex bg="purple.500" w="full" h="100vh">
+		<Flex bg="purple.500" w="full" h="100vh" p="1rem">
 			<Flex
 				w="full"
 				maxW="1200px"
