@@ -1,6 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { useQuery } from "react-query";
-import { ICoupon } from "./components/@types/types";
+import { ICoupon } from "./@types/types";
 import { CouponHeader } from "./components/Coupon/CouponHeader";
 import { CouponModal } from "./components/Coupon/CouponModal";
 import { CouponTableHeader } from "./components/Coupon/CouponTableHeader";

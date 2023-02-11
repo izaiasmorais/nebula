@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { ICoupon } from "../components/@types/types";
+import { ICoupon } from "../@types/types";
 
 interface ICouponStore {
 	couponList: ICoupon[];
