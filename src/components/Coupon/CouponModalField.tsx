@@ -17,6 +17,7 @@ export function CouponModalField({
 			</Text>
 			<Input
 				placeholder={placeholder}
+				_placeholder={{ color: "#94A3B8", fontSize: "14px" }}
 				name={name}
 				borderRadius=".5rem"
 				focusBorderColor="purple.400"

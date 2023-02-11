@@ -1,25 +1,12 @@
 import { Flex, Text } from "@chakra-ui/react";
-import { useQuery } from "react-query";
-import { ICoupon } from "./@types/types";
 import { CouponHeader } from "./components/Coupon/CouponHeader";
 import { CouponModal } from "./components/Coupon/CouponModal";
 import { CouponTableHeader } from "./components/Coupon/CouponTableHeader";
 import { CouponTableItem } from "./components/Coupon/CouponTableItem";
-import { api } from "./services/axios";
 import { useCoupon } from "./store/useCoupon";
 
 function App() {
-	const { couponList, setCouponList } = useCoupon();
-
-	const {
-		data: coupons,
-		error,
-		isLoading,
-	} = useQuery(["get-coupons"], async () => {
-		const response = await api.get<ICoupon[]>("/coupons");
-
-		setCouponList(response.data);
-	});
+	const { couponList } = useCoupon();
 
 	return (
 		<Flex bg="purple.500" w="full" h="100vh" p="1rem">
