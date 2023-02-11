@@ -7,8 +7,12 @@ import {
 	ModalBody,
 	ModalCloseButton,
 	Button,
+	Input,
+	Flex,
+	Text,
 } from "@chakra-ui/react";
 import { useCouponModal } from "../../store/useCouponModal";
+import { CouponModalField } from "./CouponModalField";
 
 export function CouponModal() {
 	const { isOpen, onClose } = useCouponModal();
@@ -18,12 +22,16 @@ export function CouponModal() {
 			<ModalOverlay />
 			<ModalContent>
 				<ModalHeader>Criar Cupom</ModalHeader>
+
 				<ModalCloseButton />
-				<ModalBody>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum
-					voluptatibus voluptate explicabo delectus, velit alias aspernatur
-					soluta? Fuga cupiditate unde, commodi pariatur odit eligendi harum
-					rerum repudiandae est labore?
+
+				<ModalBody padding="1.5rem">
+					<Flex as="form" direction="column">
+						<CouponModalField
+							name="Nome do cupom"
+							placeholder="SEGUNDOU100OFF"
+						/>
+					</Flex>
 				</ModalBody>
 
 				<ModalFooter display="flex" gap=".5rem">

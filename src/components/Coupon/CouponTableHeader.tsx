@@ -11,6 +11,7 @@ export function CouponTableHeader() {
 			fontWeight="600"
 			p="1rem"
 			gap="2rem"
+			color="black"
 			gridTemplateColumns="repeat(8, 1fr)"
 		>
 			<Flex w="180px">Código</Flex>

@@ -1,5 +1,6 @@
 import { Button, Flex, SimpleGrid, Switch } from "@chakra-ui/react";
 import { PencilSimple, Trash } from "phosphor-react";
+import { useCoupon } from "../../store/useCoupon";
 
 interface CouponTableItemProps {
 	id: string;
@@ -21,6 +22,8 @@ export function CouponTableItem({
 	isActive,
 	totalAmount,
 }: CouponTableItemProps) {
+	const { getCouponById } = useCoupon();
+
 	return (
 		<SimpleGrid
 			color="#64748B"
@@ -46,6 +49,7 @@ export function CouponTableItem({
 					paddingRight=".5rem"
 					borderRadius=".6rem"
 					leftIcon={<PencilSimple size={20} />}
+					onClick={() => getCouponById(id)}
 				/>
 			</Flex>
 			<Flex>

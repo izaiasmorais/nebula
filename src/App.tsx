@@ -6,8 +6,11 @@ import { CouponModal } from "./components/Coupon/CouponModal";
 import { CouponTableHeader } from "./components/Coupon/CouponTableHeader";
 import { CouponTableItem } from "./components/Coupon/CouponTableItem";
 import { api } from "./services/axios";
+import { useCoupon } from "./store/useCoupon";
 
 function App() {
+	const { couponList, setCouponList } = useCoupon();
+
 	const {
 		data: coupons,
 		error,
@@ -15,7 +18,7 @@ function App() {
 	} = useQuery(["get-coupons"], async () => {
 		const response = await api.get<ICoupon[]>("/coupons");
 
-		return response.data;
+		setCouponList(response.data);
 	});
 
 	return (
@@ -41,7 +44,7 @@ function App() {
 
 				<CouponTableHeader />
 
-				{coupons?.map((coupon) => (
+				{couponList?.map((coupon) => (
 					<CouponTableItem
 						key={coupon.id}
 						id={coupon.id}
