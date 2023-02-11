@@ -2,6 +2,12 @@
     🔖 EZSprint
 </h1>
 
+![image](https://user-images.githubusercontent.com/53953937/218264028-c391f3ba-32df-4c05-b5df-18039239fb69.png)
+
+<div>
+<img src="https://img.shields.io/static/v1?label=LICENSE&message=MIT&color=805AD5&style=for-the-badge"/> <img src="https://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=805AD5&style=for-the-badge"/> <img src="https://img.shields.io/static/v1?label=NODE&message=V16.15.0&color=805AD5&style=for-the-badge"/>
+</div>
+
 ## 📃 Sobre o projeto
 
 Uma aplicação que gerencia cupons de desconto e programa de fidelidade de forma completa, e utiliza das tecnologias mais modernas do mercado.
