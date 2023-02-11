@@ -13,7 +13,7 @@ export function CouponTableHeader() {
 			gap="2rem"
 			gridTemplateColumns="repeat(8, 1fr)"
 		>
-			<Flex w="230px">Código</Flex>
+			<Flex w="180px">Código</Flex>
 			<Flex>Tipo</Flex>
 			<Flex>Valor</Flex>
 			<Flex>Total</Flex>

@@ -1,52 +1,59 @@
-[
-	{
-		"couponCode": "SUMMER10",
-		"discountType": "percentual",
-		"discountValue": 10,
-		"totalAmount": 500,
-		"amountAvailable": 100,
-		"amountByClient": 1,
-		"isActive": true,
-		"firstPurchase": false
-	},
-	{
-		"couponCode": "WINTER20",
-		"discountType": "fixed",
-		"discountValue": 20,
-		"totalAmount": 1000,
-		"amountAvailable": 50,
-		"amountByClient": 1,
-		"isActive": true,
-		"firstPurchase": false
-	},
-	{
-		"couponCode": "FALL30",
-		"discountType": "percentual",
-		"discountValue": 30,
-		"totalAmount": 1500,
-		"amountAvailable": 200,
-		"amountByClient": 1,
-		"isActive": false,
-		"firstPurchase": true
-	},
-	{
-		"couponCode": "SPRING40",
-		"discountType": "fixed",
-		"discountValue": 40,
-		"totalAmount": 2000,
-		"amountAvailable": 150,
-		"amountByClient": 1,
-		"isActive": true,
-		"firstPurchase": false
-	},
-	{
-		"couponCode": "SUMMER50",
-		"discountType": "percentual",
-		"discountValue": 50,
-		"totalAmount": 2500,
-		"amountAvailable": 75,
-		"amountByClient": 1,
-		"isActive": false,
-		"firstPurchase": true
-	}
-]
+{
+	"coupons": [
+		{
+			"id": "8465f970-0d8f-4e9e-966d-0e1bf8e07187",
+			"couponCode": "SUMMER10",
+			"discountType": "percentual",
+			"discountValue": 10,
+			"totalAmount": 500,
+			"amountAvailable": 100,
+			"amountByClient": 1,
+			"isActive": true,
+			"firstPurchase": false
+		},
+		{
+			"id": "ca51abf8-1365-45c1-ad7d-6447e06448ed",
+			"couponCode": "WINTER20",
+			"discountType": "fixed",
+			"discountValue": 20,
+			"totalAmount": 1000,
+			"amountAvailable": 50,
+			"amountByClient": 1,
+			"isActive": true,
+			"firstPurchase": false
+		},
+		{
+			"id": "6f54b6a0-e2f0-4bf9-8c8d-a0fbf29c2b17",
+			"couponCode": "FALL30",
+			"discountType": "percentual",
+			"discountValue": 30,
+			"totalAmount": 1500,
+			"amountAvailable": 200,
+			"amountByClient": 1,
+			"isActive": false,
+			"firstPurchase": true
+		},
+		{
+			"id": "7b0cfd99-6dd2-4acf-9b9c-3392f6cbc0e7",
+			"couponCode": "SPRING40",
+			"discountType": "fixed",
+			"discountValue": 40,
+			"totalAmount": 2000,
+			"amountAvailable": 150,
+			"amountByClient": 1,
+			"isActive": true,
+			"firstPurchase": false
+		},
+		{
+			"id": "5e5c3f71-eb37-44e6-b0c5-9e9dc7bbc9a6",
+			"couponCode": "SUMMER50",
+			"discountType": "percentual",
+			"discountValue": 50,
+			"totalAmount": 2500,
+			"amountAvailable": 75,
+			"amountByClient": 1,
+			"isActive": false,
+			"firstPurchase": true
+		}
+	]
+}
