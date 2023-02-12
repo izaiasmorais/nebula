@@ -16,5 +16,4 @@ export default {
 			"identity-obj-proxy",
 	},
 	verbose: true,
-	testTimeout: 30000,
 };
