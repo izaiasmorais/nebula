@@ -22,7 +22,7 @@ export function CouponTableItem({
 	isActive,
 	totalAmount,
 }: CouponTableItemProps) {
-	const { getCouponById, toggleActiveCoupon, removeCoupon } = useCoupon();
+	const { toggleActiveCoupon, removeCoupon } = useCoupon();
 
 	return (
 		<SimpleGrid
@@ -53,7 +53,6 @@ export function CouponTableItem({
 					paddingRight=".5rem"
 					borderRadius=".6rem"
 					leftIcon={<PencilSimple size={20} />}
-					onClick={() => getCouponById(id)}
 				/>
 			</Flex>
 			<Flex>

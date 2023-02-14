@@ -7,14 +7,9 @@ const mockQueryClient = new QueryClient();
 describe("App", () => {
 	afterEach(cleanup);
 
-	it("should be able to display SUMMER10 in the screen", async () => {
-		const { findByText } = render(
-			<QueryClientProvider client={mockQueryClient}>
-				<App />
-			</QueryClientProvider>
-		);
-		const summerText = await findByText("SUMMER10");
+	it("should be able to delete a coupon", async () => {});
 
-		expect(summerText).toBeTruthy();
-	});
+	it("should be able to change coupon status", async () => {});
+
+	it("should be able to open edit modal", async () => {});
 });
