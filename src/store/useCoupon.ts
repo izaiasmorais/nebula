@@ -6,10 +6,10 @@ interface ICouponStore {
 	setCouponList: (couponList: ICoupon[]) => void;
 	addCoupon: (coupon: ICoupon) => void;
 	removeCoupon: (id: string) => void;
-	getCouponById: (id: string) => void;
+	toggleActiveCoupon: (id: string) => void;
 }
 
-export const useCoupon = create<ICouponStore>((set, get) => ({
+export const useCoupon = create<ICouponStore>((set) => ({
 	couponList: [],
 	setCouponList(couponList: ICoupon[]) {
 		set(() => ({ couponList }));
@@ -22,13 +22,15 @@ export const useCoupon = create<ICouponStore>((set, get) => ({
 			couponList: state.couponList.filter((coupon) => coupon.id !== id),
 		}));
 	},
-	getCouponById(id: string) {
-		const couponList = get().couponList;
+	toggleActiveCoupon(id: string) {
+		set((state) => ({
+			couponList: state.couponList.map((coupon) => {
+				if (coupon.id === id) {
+					return { ...coupon, isActive: !coupon.isActive };
+				}
 
-		const couponIndex = couponList.findIndex((coupon) => coupon.id === id);
-
-		if (couponIndex >= 0) {
-			console.log(couponList[couponIndex]);
-		}
+				return coupon;
+			}),
+		}));
 	},
 }));

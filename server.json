@@ -2,7 +2,7 @@
 	"coupons": [
 		{
 			"id": "8465f970-0d8f-4e9e-966d-0e1bf8e07187",
-			"couponCode": "SUMMER10",
+			"couponCode": "SUMMER100",
 			"discountType": "percentual",
 			"discountValue": 10,
 			"totalAmount": 500,

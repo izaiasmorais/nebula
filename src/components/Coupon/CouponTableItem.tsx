@@ -22,7 +22,7 @@ export function CouponTableItem({
 	isActive,
 	totalAmount,
 }: CouponTableItemProps) {
-	const { getCouponById } = useCoupon();
+	const { getCouponById, toggleActiveCoupon, removeCoupon } = useCoupon();
 
 	return (
 		<SimpleGrid
@@ -39,7 +39,11 @@ export function CouponTableItem({
 			<Flex>{totalAmount}</Flex>
 			<Flex>{amountAvailable}</Flex>
 			<Flex>
-				<Switch colorScheme="green" isChecked={isActive} />
+				<Switch
+					colorScheme="green"
+					isChecked={isActive}
+					onChange={() => toggleActiveCoupon(id)}
+				/>
 			</Flex>
 			<Flex>
 				<Button
@@ -61,6 +65,7 @@ export function CouponTableItem({
 					paddingRight=".5rem"
 					borderRadius=".6rem"
 					leftIcon={<Trash size={20} />}
+					onClick={() => removeCoupon(id)}
 				/>
 			</Flex>
 		</SimpleGrid>
