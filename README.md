@@ -15,7 +15,7 @@ Uma aplicação que gerencia cupons de desconto e programa de fidelidade de form
 ### Funcionalidades
 
 - [x] Gerenciamento de estados com Zustand
-- [ ] Gerenciamento de requisições em cache com React Query
+- [x] Gerenciamento de requisições e cache com React Query
 - [ ] Gerenciamento completo de cupons de desconto
 - [ ] Gerenciamento completo de programa de fidelidade
 - [ ] Testes automatizados com Jest e Testing Library
