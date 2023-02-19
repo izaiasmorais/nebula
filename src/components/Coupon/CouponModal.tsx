@@ -16,7 +16,12 @@ export function CouponModal() {
 	const { isOpen, onClose } = useCouponModal();
 
 	return (
-		<Modal isOpen={isOpen} onClose={onClose} size="xl">
+		<Modal
+			isOpen={isOpen}
+			onClose={onClose}
+			data-testid="add-coupon-modal"
+			size="xl"
+		>
 			<ModalOverlay />
 			<ModalContent>
 				<ModalHeader>Criar Cupom</ModalHeader>

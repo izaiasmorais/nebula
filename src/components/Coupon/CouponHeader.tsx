@@ -39,6 +39,7 @@ export function CouponHeader() {
 				borderRadius="50px"
 				leftIcon={<Plus size={20} />}
 				onClick={onOpen}
+				data-testid="add-coupon-button"
 			>
 				Criar cupom
 			</Button>
