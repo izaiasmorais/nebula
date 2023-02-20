@@ -1,23 +1,24 @@
 import { render, cleanup, fireEvent } from "@testing-library/react";
+import { QueryClientProvider } from "react-query";
+import { queryClient } from "../services/react-query";
 import App from "../App";
 
 describe("App", () => {
 	afterEach(cleanup);
 
-	it("should be able to render the create coupon button", () => {
-		const { getByTestId } = render(<App />);
+	it("should be able to render the add coupon modal when add coupon button is clicked", () => {
+		const { getByTestId, getByText } = render(
+			<QueryClientProvider client={queryClient}>
+				<App />
+			</QueryClientProvider>
+		);
 
-		getByTestId("add-coupon-button");
-	});
+		const addCouponButton = getByTestId("add-coupon-button");
 
-	it("should be able to open the create coupon modal", () => {
-		const { getByTestId } = render(<App />);
+		fireEvent.click(addCouponButton);
 
-		const createCouponButton = getByTestId("add-coupon-button");
-		const createCouponModal = getByTestId("create-coupon-modal");
+		const addCouponModal = getByText("Nome do cupom");
 
-		fireEvent.click(createCouponButton);
-
-		expect(createCouponModal).toHaveAttribute("isOpen", "true");
+		expect(addCouponModal).toBeTruthy();
 	});
 });
