@@ -1,10 +1,10 @@
 import { Badge } from "@chakra-ui/react";
 
-export function parseBadge(type: string) {
-	function toProperCase(str: string): string {
-		return str.charAt(0).toUpperCase() + str.slice(1);
-	}
+export function toProperCase(str: string): string {
+	return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
+export function parseBadge(type: string) {
 	if (type === "paid") {
 		return (
 			<Badge colorScheme="green" px=".4rem" py=".2rem" borderRadius=".3rem">

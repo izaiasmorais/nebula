@@ -8,29 +8,38 @@ export function InvoiceHeader() {
 	const { onOpen } = useInvoiceModal();
 
 	return (
-		<Flex mt="2rem" w="full" justifyContent="space-between">
-			<Flex gap="1rem">
+		<Flex
+			mt="2rem"
+			gap="1rem"
+			w="full"
+			direction={["column", "row", "row"]}
+			justifyContent="space-between"
+		>
+			<Flex gap="1rem" direction={["column", "column", "column", "row", "row"]}>
 				<Input
 					placeholder="Buscar por conta"
 					maxW="300px"
 					borderRadius="50px"
 					focusBorderColor="purple.400"
 				/>
-				<Flex
-					alignItems="center"
-					gap=".3rem"
-					cursor="pointer"
-					onClick={() => setShowAll(!showAll)}
-				>
+				<Flex gap=".5rem">
 					<Checkbox
 						rounded="md"
 						colorScheme="purple"
 						size="lg"
 						isChecked={showAll}
+						onChange={() => setShowAll(!showAll)}
 					/>
-					<Text w="max-content" display="block">
-						Mostrar todos
-					</Text>
+					<Flex
+						alignItems="center"
+						gap=".3rem"
+						cursor="pointer"
+						onClick={() => setShowAll(!showAll)}
+					>
+						<Text w="max-content" display="block">
+							Mostrar todos
+						</Text>
+					</Flex>
 				</Flex>
 			</Flex>
 

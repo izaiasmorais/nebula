@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { useInvoiceModal } from "../../store/useInvoiceModal";
 import { InvoiceModalField } from "./InvoiceModalField";
+import { InvoiceStatusToggle } from "./InvoiceStatusToggle";
 
 export function InvoiceModal() {
 	const { isOpen, onClose } = useInvoiceModal();
@@ -20,30 +21,36 @@ export function InvoiceModal() {
 			isOpen={isOpen}
 			onClose={onClose}
 			data-testid="add-invoice-modal"
-			size="xl"
+			size="md"
+
 		>
 			<ModalOverlay />
-			<ModalContent>
-				<ModalHeader>Adicionar Conta</ModalHeader>
+			<ModalContent mt="10rem">
+				<ModalHeader >Adicionar Conta</ModalHeader>
 
 				<ModalCloseButton />
 
-				<ModalBody padding="1.5rem">
+				<ModalBody px="1.5rem">
 					<Flex as="form" direction="column" gap="1rem">
 						<InvoiceModalField name="Título" placeholder="Fatura da TV" />
 						<InvoiceModalField name="Vencimento" type="date" />
-						<InvoiceModalField name="Valor" placeholder="R$ 0,00" />
-						<InvoiceModalField name="Parcelas" placeholder="0" />
+						<InvoiceModalField
+							name="Valor"
+							placeholder="R$ 0,00"
+							type="number"
+						/>
+						<InvoiceModalField name="Parcelas" placeholder="0" type="number" />
+						<InvoiceStatusToggle />
 					</Flex>
 				</ModalBody>
 
-				<ModalFooter display="flex" gap=".5rem">
+				<ModalFooter display="flex" gap="1rem">
 					<Button colorScheme="red" onClick={onClose}>
 						Cancelar
 					</Button>
 
 					<Button colorScheme="purple" mr={3}>
-						Avançar
+						Confirmar
 					</Button>
 				</ModalFooter>
 			</ModalContent>

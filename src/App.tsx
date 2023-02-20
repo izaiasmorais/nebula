@@ -28,7 +28,7 @@ function App() {
 				mt="5rem"
 				textAlign="center"
 				display="flex"
-				p="2.5rem"
+				p={["1.5rem", "2rem", "2.5rem"]}
 				flexDirection="column"
 			>
 				<Text color="purple.500" as="strong">
@@ -37,20 +37,24 @@ function App() {
 
 				<InvoiceHeader />
 
-				<InvoiceTableHeader />
+				<Flex direction="column" overflow="auto">
+					<InvoiceTableHeader />
+				</Flex>
 
-				{invoices?.map((i) => (
-					<InvoiceTableItem
-						key={i.id}
-						id={i.id}
-						installments={i.installments}
-						createAt={i.createAt}
-						dueDate={i.dueDate}
-						value={i.value}
-						title={i.title}
-						status={i.status}
-					/>
-				))}
+				<Flex direction="column" overflow="auto">
+					{invoices?.map((i) => (
+						<InvoiceTableItem
+							key={i.id}
+							id={i.id}
+							installments={i.installments}
+							createAt={i.createAt}
+							dueDate={i.dueDate}
+							value={i.value}
+							title={i.title}
+							status={i.status}
+						/>
+					))}
+				</Flex>
 			</Flex>
 
 			<InvoiceModal />
