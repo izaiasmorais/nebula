@@ -14,13 +14,12 @@ Uma aplicação que gerencia cupons de desconto e programa de fidelidade de form
 
 ### Funcionalidades
 
-- [x] Gerenciamento de estados com Zustand
-- [x] Gerenciamento de requisições e cache com React Query
-- [ ] Gerenciamento completo de cupons de desconto
-- [ ] Gerenciamento completo de programa de fidelidade
-- [ ] Testes automatizados com Jest e Testing Library
-- [ ] Design responsivo
-- [ ] Modo noturno
+- [x] Gerenciamento de estados com Zustand.
+- [x] Gerenciamento de requisições e cache com React Query.
+- [ ] Gerenciamento completo de contas à pagar.
+- [ ] Testes automatizados com Jest e Testing Library.
+- [ ] Design responsivo.
+- [ ] Modo noturno.
 
 ## 🚀 Tecnologias
 
@@ -36,7 +35,7 @@ Uma aplicação que gerencia cupons de desconto e programa de fidelidade de form
 ## 💻 Clonando projeto
 
 ```bash
-$ git clone https://github.com/izaiasmorais/ezsprint.git && cd ezsprint
+$ git clone https://github.com/izaiasmorais/ezinvoice.git && cd ezinvoice
 ```
 
 ```bash
