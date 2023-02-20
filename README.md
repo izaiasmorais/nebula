@@ -1,8 +1,8 @@
 <h1 align='center'>
-    🔖 EZSprint
+   💰 EZInvoice
 </h1>
 
-![image](https://user-images.githubusercontent.com/53953937/218264028-c391f3ba-32df-4c05-b5df-18039239fb69.png)
+![image](https://user-images.githubusercontent.com/53953937/220130565-e0cc1ab6-f8c0-4532-8071-80e306e4af2d.png)
 
 <div>
 <img src="https://img.shields.io/static/v1?label=LICENSE&message=MIT&color=805AD5&style=for-the-badge"/> <img src="https://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=805AD5&style=for-the-badge"/> <img src="https://img.shields.io/static/v1?label=NODE&message=V16.15.0&color=805AD5&style=for-the-badge"/>
@@ -44,5 +44,6 @@ $ npm i
 
 # Rodando o projeto
 $ npm run dev
+$ npm run server
 
 ```
