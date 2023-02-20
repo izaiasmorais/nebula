@@ -20,7 +20,7 @@ function App() {
 		<Flex bg="purple.500" w="full" h="100vh" p="1rem">
 			<Flex
 				w="full"
-				maxW="1400px"
+				maxW="1300px"
 				bg="white"
 				maxH="700px"
 				borderRadius="1rem"

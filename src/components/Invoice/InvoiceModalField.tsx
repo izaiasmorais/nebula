@@ -2,7 +2,7 @@ import { Flex, Text, Input, InputProps } from "@chakra-ui/react";
 
 interface FormFieldProps extends InputProps {
 	name: string;
-	placeholder: string;
+	placeholder?: string;
 }
 
 export function InvoiceModalField({

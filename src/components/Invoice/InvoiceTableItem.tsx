@@ -3,6 +3,7 @@ import { PencilSimple, Trash } from "phosphor-react";
 import { InvoiceType } from "../../@types/types";
 import { useInvoice } from "../../store/useInvoice";
 import { formatDate } from "../../utils/formatDate";
+import { parseBadge } from "../../utils/parseBadge";
 
 interface InvoiceTableItemProps extends InvoiceType {}
 
@@ -19,19 +20,20 @@ export function InvoiceTableItem({
 
 	return (
 		<SimpleGrid
-			color="#64748B"
+			color="#959da8"
 			alignItems="center"
 			fontWeight="600"
 			p="1rem"
 			gap="2rem"
+			fontSize="14px"
 			gridTemplateColumns="repeat(8, 1fr)"
 		>
-			<Flex w="230px">{title}</Flex>
-			<Flex>{formatDate(createAt)}</Flex>
-			<Flex>{formatDate(dueDate)}</Flex>
-			<Flex>R$ {value}</Flex>
+			<Flex w="250px">{title}</Flex>
+			<Flex w="130px">{formatDate(createAt)}</Flex>
+			<Flex w="130px">{formatDate(dueDate)}</Flex>
+			<Flex w="120px">R$ {value}</Flex>
 			<Flex>{installments}</Flex>
-			<Flex>{status}</Flex>
+			<Flex w="120px">{parseBadge(status)}</Flex>
 			<Flex>
 				<Button
 					maxW="1rem"

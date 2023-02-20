@@ -11,15 +11,16 @@ export function InvoiceTableHeader() {
 			fontWeight="600"
 			p="1rem"
 			gap="2rem"
+			fontSize="14px"
 			color="black"
 			gridTemplateColumns="repeat(8, 1fr)"
 		>
-			<Flex w="230px">Título</Flex>
-			<Flex>Criado</Flex>
-			<Flex>Vencimento</Flex>
-			<Flex>Valor</Flex>
+			<Flex w="250px">Título</Flex>
+			<Flex w="130px">Criado</Flex>
+			<Flex w="130px">Vencimento</Flex>
+			<Flex w="120px">Valor</Flex>
 			<Flex>Parcela</Flex>
-			<Flex>Status</Flex>
+			<Flex w="120px">Status</Flex>
 			<Flex>Editar</Flex>
 			<Flex>Excluir</Flex>
 		</SimpleGrid>

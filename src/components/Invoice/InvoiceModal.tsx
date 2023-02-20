@@ -30,12 +30,10 @@ export function InvoiceModal() {
 
 				<ModalBody padding="1.5rem">
 					<Flex as="form" direction="column" gap="1rem">
-						<InvoiceModalField
-							name="Título da conta"
-							placeholder="Fatura da TV"
-						/>
-
+						<InvoiceModalField name="Título" placeholder="Fatura da TV" />
+						<InvoiceModalField name="Vencimento" type="date" />
 						<InvoiceModalField name="Valor" placeholder="R$ 0,00" />
+						<InvoiceModalField name="Parcelas" placeholder="0" />
 					</Flex>
 				</ModalBody>
 
