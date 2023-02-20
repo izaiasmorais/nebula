@@ -10,7 +10,7 @@
 
 ## 📃 Sobre o projeto
 
-Uma aplicação que gerencia cupons de desconto e programa de fidelidade de forma completa, e utiliza das tecnologias mais modernas do mercado.
+Uma aplicação que gerencia contas a serem pagas de forma completa, e utiliza das tecnologias mais modernas do mercado.
 
 ### Funcionalidades
 
