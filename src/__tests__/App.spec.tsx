@@ -6,19 +6,19 @@ import App from "../App";
 describe("App", () => {
 	afterEach(cleanup);
 
-	it("should be able to render the add coupon modal when add coupon button is clicked", () => {
+	it("should be able to render the add invoice modal when add invoice button is clicked", () => {
 		const { getByTestId, getByText } = render(
 			<QueryClientProvider client={queryClient}>
 				<App />
 			</QueryClientProvider>
 		);
 
-		const addCouponButton = getByTestId("add-coupon-button");
+		const addInvoiceButton = getByTestId("add-invoice-button");
 
-		fireEvent.click(addCouponButton);
+		fireEvent.click(addInvoiceButton);
 
-		const addCouponModal = getByText("Nome do cupom");
+		const addInvoiceModal = getByText("Nome do conta");
 
-		expect(addCouponModal).toBeTruthy();
+		expect(addInvoiceModal).toBeTruthy();
 	});
 });

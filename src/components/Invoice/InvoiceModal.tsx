@@ -9,38 +9,33 @@ import {
 	Button,
 	Flex,
 } from "@chakra-ui/react";
-import { useCouponModal } from "../../store/useCouponModal";
-import { CouponModalField } from "./CouponModalField";
+import { useInvoiceModal } from "../../store/useInvoiceModal";
+import { InvoiceModalField } from "./InvoiceModalField";
 
-export function CouponModal() {
-	const { isOpen, onClose } = useCouponModal();
+export function InvoiceModal() {
+	const { isOpen, onClose } = useInvoiceModal();
 
 	return (
 		<Modal
 			isOpen={isOpen}
 			onClose={onClose}
-			data-testid="add-coupon-modal"
+			data-testid="add-invoice-modal"
 			size="xl"
 		>
 			<ModalOverlay />
 			<ModalContent>
-				<ModalHeader>Criar Cupom</ModalHeader>
+				<ModalHeader>Adicionar Conta</ModalHeader>
 
 				<ModalCloseButton />
 
 				<ModalBody padding="1.5rem">
 					<Flex as="form" direction="column" gap="1rem">
-						<CouponModalField
-							name="Nome do cupom"
-							placeholder="SEGUNDOU100OFF"
+						<InvoiceModalField
+							name="Título da conta"
+							placeholder="Fatura da TV"
 						/>
 
-						<CouponModalField name="Valor do desconto (%)" placeholder="0%" />
-
-						<CouponModalField
-							name="Quantidade de cupons disponíveis"
-							placeholder="0"
-						/>
+						<InvoiceModalField name="Valor" placeholder="R$ 0,00" />
 					</Flex>
 				</ModalBody>
 

@@ -1,26 +1,26 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { useQuery } from "react-query";
-import { CouponHeader } from "./components/Coupon/CouponHeader";
-import { CouponModal } from "./components/Coupon/CouponModal";
-import { CouponTableHeader } from "./components/Coupon/CouponTableHeader";
-import { CouponTableItem } from "./components/Coupon/CouponTableItem";
+import { InvoiceHeader } from "./components/Invoice/InvoiceHeader";
+import { InvoiceModal } from "./components/Invoice/InvoiceModal";
+import { InvoiceTableHeader } from "./components/Invoice/InvoiceTableHeader";
+import { InvoiceTableItem } from "./components/Invoice/InvoiceTableItem";
+import { useInvoice } from "./store/useInvoice";
 import { api } from "./services/axios";
-import { useCoupon } from "./store/useCoupon";
 
 function App() {
-	const { couponList, setCouponList } = useCoupon();
+	const { invoices, setInvoices } = useInvoice();
 
-	useQuery(["get-coupons"], async () => {
-		const response = await api.get("/coupons");
+	useQuery(["get-invoices"], async () => {
+		const response = await api.get("/invoices");
 
-		setCouponList(response.data);
+		setInvoices(response.data);
 	});
 
 	return (
 		<Flex bg="purple.500" w="full" h="100vh" p="1rem">
 			<Flex
 				w="full"
-				maxW="1200px"
+				maxW="1400px"
 				bg="white"
 				maxH="700px"
 				borderRadius="1rem"
@@ -32,29 +32,28 @@ function App() {
 				flexDirection="column"
 			>
 				<Text color="purple.500" as="strong">
-					Cupons
+					Contas
 				</Text>
 
-				<CouponHeader />
+				<InvoiceHeader />
 
-				<CouponTableHeader />
+				<InvoiceTableHeader />
 
-				{couponList?.map((coupon) => (
-					<CouponTableItem
-						key={coupon.id}
-						id={coupon.id}
-						amountAvailable={coupon.amountAvailable}
-						amountByClient={coupon.amountByClient}
-						couponCode={coupon.couponCode}
-						discountType={coupon.discountType}
-						discountValue={coupon.discountValue}
-						isActive={coupon.isActive}
-						totalAmount={coupon.totalAmount}
+				{invoices?.map((i) => (
+					<InvoiceTableItem
+						key={i.id}
+						id={i.id}
+						installments={i.installments}
+						createAt={i.createAt}
+						dueDate={i.dueDate}
+						value={i.value}
+						title={i.title}
+						status={i.status}
 					/>
 				))}
 			</Flex>
 
-			<CouponModal />
+			<InvoiceModal />
 		</Flex>
 	);
 }

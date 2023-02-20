@@ -1,6 +1,6 @@
-import { Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import { Flex, SimpleGrid } from "@chakra-ui/react";
 
-export function CouponTableHeader() {
+export function InvoiceTableHeader() {
 	return (
 		<SimpleGrid
 			bg="#F1F5F9"
@@ -14,12 +14,12 @@ export function CouponTableHeader() {
 			color="black"
 			gridTemplateColumns="repeat(8, 1fr)"
 		>
-			<Flex w="180px">Código</Flex>
-			<Flex>Tipo</Flex>
+			<Flex w="230px">Título</Flex>
+			<Flex>Criado</Flex>
+			<Flex>Vencimento</Flex>
 			<Flex>Valor</Flex>
-			<Flex>Total</Flex>
-			<Flex>Disponível</Flex>
-			<Flex>Ativo</Flex>
+			<Flex>Parcela</Flex>
+			<Flex>Status</Flex>
 			<Flex>Editar</Flex>
 			<Flex>Excluir</Flex>
 		</SimpleGrid>

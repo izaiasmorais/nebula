@@ -1,20 +1,9 @@
-export interface ICoupon {
+export interface InvoiceType {
 	id: string;
-	couponCode: string;
-	discountType: "percentual" | "fixed";
-	discountValue: number;
-	totalAmount: number;
-	amountAvailable: number;
-	amountByClient: number;
-	isActive: boolean;
-	firstPurchase: boolean;
+	title: string;
+	createAt: Date;
+	dueDate: Date;
+	value: number;
+	installments: number;
+	status: string;
 }
-
-// availibility: [
-// 	startDay: number,
-// 	endDay: number,
-// 	startDate: Date,
-// 	endDate: Date,
-// 	startHour: number,
-// 	endHour: number
-// ];

@@ -1,59 +1,49 @@
 {
-	"coupons": [
+	"invoices": [
 		{
-			"id": "8465f970-0d8f-4e9e-966d-0e1bf8e07187",
-			"couponCode": "SUMMER100",
-			"discountType": "percentual",
-			"discountValue": 10,
-			"totalAmount": 500,
-			"amountAvailable": 100,
-			"amountByClient": 1,
-			"isActive": true,
-			"firstPurchase": false
+			"id": "f92e27aa-6c8e-4b68-a9c9-aa9bfc3b8fc3",
+			"title": "Web Design Services",
+			"createAt": "2022-08-15T08:30:00.000Z",
+			"dueDate": "2022-09-14T08:30:00.000Z",
+			"value": 5000,
+			"installments": 1,
+			"status": "pending"
 		},
 		{
-			"id": "ca51abf8-1365-45c1-ad7d-6447e06448ed",
-			"couponCode": "WINTER20",
-			"discountType": "fixed",
-			"discountValue": 20,
-			"totalAmount": 1000,
-			"amountAvailable": 50,
-			"amountByClient": 1,
-			"isActive": true,
-			"firstPurchase": false
+			"id": "f6b79a1e-72ba-438e-a64b-d06f0c18af8a",
+			"title": "Marketing Consulting",
+			"createAt": "2022-08-22T08:30:00.000Z",
+			"dueDate": "2022-09-21T08:30:00.000Z",
+			"value": 8000,
+			"installments": 2,
+			"status": "paid"
 		},
 		{
-			"id": "6f54b6a0-e2f0-4bf9-8c8d-a0fbf29c2b17",
-			"couponCode": "FALL30",
-			"discountType": "percentual",
-			"discountValue": 30,
-			"totalAmount": 1500,
-			"amountAvailable": 200,
-			"amountByClient": 1,
-			"isActive": false,
-			"firstPurchase": true
+			"id": "1f78dada-82a2-4956-b300-e6bfa69e9c5f",
+			"title": "IT Support",
+			"createAt": "2022-09-01T08:30:00.000Z",
+			"dueDate": "2022-09-30T08:30:00.000Z",
+			"value": 2500,
+			"installments": 1,
+			"status": "pending"
 		},
 		{
-			"id": "7b0cfd99-6dd2-4acf-9b9c-3392f6cbc0e7",
-			"couponCode": "SPRING40",
-			"discountType": "fixed",
-			"discountValue": 40,
-			"totalAmount": 2000,
-			"amountAvailable": 150,
-			"amountByClient": 1,
-			"isActive": true,
-			"firstPurchase": false
+			"id": "8d3a3c5b-7575-49c2-b8f5-82c14052dd2f",
+			"title": "Social Media Management",
+			"createAt": "2022-09-10T08:30:00.000Z",
+			"dueDate": "2022-10-10T08:30:00.000Z",
+			"value": 6000,
+			"installments": 3,
+			"status": "pending"
 		},
 		{
-			"id": "5e5c3f71-eb37-44e6-b0c5-9e9dc7bbc9a6",
-			"couponCode": "SUMMER50",
-			"discountType": "percentual",
-			"discountValue": 50,
-			"totalAmount": 2500,
-			"amountAvailable": 75,
-			"amountByClient": 1,
-			"isActive": false,
-			"firstPurchase": true
+			"id": "fc269baa-06e7-4e0c-a692-67de08b9b722",
+			"title": "Graphic Design Services",
+			"createAt": "2022-09-20T08:30:00.000Z",
+			"dueDate": "2022-10-20T08:30:00.000Z",
+			"value": 3500,
+			"installments": 1,
+			"status": "paid"
 		}
 	]
 }
