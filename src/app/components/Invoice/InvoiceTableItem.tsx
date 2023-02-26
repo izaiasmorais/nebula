@@ -1,9 +1,9 @@
 import { Button, Flex, SimpleGrid } from "@chakra-ui/react";
 import { PencilSimple, Trash } from "phosphor-react";
-import { InvoiceType } from "../../@types/types";
-import { useInvoice } from "../../store/useInvoice";
-import { formatDate } from "../../utils/formatDate";
-import { parseBadge } from "../../utils/parseBadge";
+import { InvoiceType } from "../../../@types/types";
+import { useInvoice } from "../../../store/Invoices/useInvoice";
+import { formatDate } from "../../../utils/formatDate";
+import { parseBadge } from "../../../utils/parseBadge";
 
 interface InvoiceTableItemProps extends InvoiceType {}
 

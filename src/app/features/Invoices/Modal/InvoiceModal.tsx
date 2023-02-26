@@ -9,9 +9,9 @@ import {
 	Button,
 	Flex,
 } from "@chakra-ui/react";
-import { useInvoiceModal } from "../../store/useInvoiceModal";
-import { InvoiceModalField } from "./InvoiceModalField";
-import { InvoiceStatusToggle } from "./InvoiceStatusToggle";
+import { useInvoiceModal } from "../../../../store/Invoices/useInvoiceModal";
+import { InvoiceModalField } from "../../../components/Invoice/InvoiceModalField";
+import { InvoiceStatusToggle } from "../../../components/Invoice/InvoiceStatusToggle";
 
 export function InvoiceModal() {
 	const { isOpen, onClose } = useInvoiceModal();
@@ -22,11 +22,10 @@ export function InvoiceModal() {
 			onClose={onClose}
 			data-testid="add-invoice-modal"
 			size="md"
-
 		>
 			<ModalOverlay />
 			<ModalContent mt="10rem">
-				<ModalHeader >Adicionar Conta</ModalHeader>
+				<ModalHeader>Adicionar Conta</ModalHeader>
 
 				<ModalCloseButton />
 

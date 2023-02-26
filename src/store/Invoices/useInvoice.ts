@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import { InvoiceType } from "../@types/types";
-import { invoices } from "../mocks/invoices";
+import { InvoiceType } from "../../@types/types";
+import { invoices } from "../../mocks/invoices";
 
 interface InvoiceTypeStore {
 	invoices: InvoiceType[];
