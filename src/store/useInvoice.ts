@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { InvoiceType } from "../@types/types";
+import { invoices } from "../mocks/invoices";
 
 interface InvoiceTypeStore {
 	invoices: InvoiceType[];
@@ -9,7 +10,7 @@ interface InvoiceTypeStore {
 }
 
 export const useInvoice = create<InvoiceTypeStore>((set) => ({
-	invoices: [],
+	invoices: invoices,
 	setInvoices(invoices: InvoiceType[]) {
 		set(() => ({ invoices }));
 	},
