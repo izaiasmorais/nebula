@@ -10,8 +10,8 @@ import {
 	Flex,
 } from "@chakra-ui/react";
 import { useInvoiceModal } from "../../../../store/Invoices/useInvoiceModal";
-import { InvoiceModalField } from "../../../components/Invoice/InvoiceModalField";
-import { InvoiceStatusToggle } from "../../../components/Invoice/InvoiceStatusToggle";
+import { InvoiceModalField } from "./InvoiceModalField";
+import { InvoiceStatusToggle } from "./InvoiceStatusToggle";
 
 export function InvoiceModal() {
 	const { isOpen, onClose } = useInvoiceModal();

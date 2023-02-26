@@ -1,9 +1,12 @@
-import { Button, Flex, SimpleGrid } from "@chakra-ui/react";
-import { PencilSimple, Trash } from "phosphor-react";
+import { Flex, SimpleGrid } from "@chakra-ui/react";
 import { InvoiceType } from "../../../@types/types";
 import { useInvoice } from "../../../store/Invoices/useInvoice";
 import { formatDate } from "../../../utils/formatDate";
 import { parseBadge } from "../../../utils/parseBadge";
+import {
+	DeleteButton,
+	EditButton,
+} from "../../components/Global/CustomButtons";
 
 interface InvoiceTableItemProps extends InvoiceType {}
 
@@ -35,26 +38,10 @@ export function InvoiceTableItem({
 			<Flex>{installments}</Flex>
 			<Flex w="120px">{parseBadge(status)}</Flex>
 			<Flex>
-				<Button
-					maxW="1rem"
-					display="flex"
-					alignItems="center"
-					paddingRight=".5rem"
-					borderRadius=".6rem"
-					leftIcon={<PencilSimple size={20} />}
-				/>
+				<EditButton />
 			</Flex>
 			<Flex>
-				<Button
-					maxW="1rem"
-					colorScheme="red"
-					display="flex"
-					alignItems="center"
-					paddingRight=".5rem"
-					borderRadius=".6rem"
-					leftIcon={<Trash size={20} />}
-					onClick={() => deleteInvoice(id)}
-				/>
+				<DeleteButton onClick={() => deleteInvoice(id)} />
 			</Flex>
 		</SimpleGrid>
 	);

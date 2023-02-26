@@ -6,7 +6,11 @@ import {
 	TabPanels,
 	TabPanel,
 } from "@chakra-ui/react";
+import { GroupsView } from "../../views/Groups";
 import { InvoicesView } from "../../views/Invoices";
+import { ObservationsView } from "../../views/Observations";
+import { PrintingLocationView } from "../../views/PritingLocation";
+import { ProductsView } from "../../views/Products";
 
 export function AppTabs() {
 	const TabNames = [
@@ -19,8 +23,8 @@ export function AppTabs() {
 
 	return (
 		<Flex>
-			<Tabs variant="enclosed">
-				<TabList w="700px" gap="1rem" ml="1rem" mb="-1rem">
+			<Tabs variant="enclosed" border="transparent">
+				<TabList w="700px" gap="1rem" ml="1rem" mb="-1rem" h="50px">
 					{TabNames.map((item) => (
 						<Tab
 							key={item}
@@ -45,19 +49,19 @@ export function AppTabs() {
 					</TabPanel>
 
 					<TabPanel>
-						<p>two!</p>
+						<ProductsView />
 					</TabPanel>
 
 					<TabPanel>
-						<p>two!</p>
+						<GroupsView />
 					</TabPanel>
 
 					<TabPanel>
-						<p>two!</p>
+						<ObservationsView />
 					</TabPanel>
 
 					<TabPanel>
-						<p>two!</p>
+						<PrintingLocationView />
 					</TabPanel>
 				</TabPanels>
 			</Tabs>
