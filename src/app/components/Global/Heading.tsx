@@ -1,5 +1,6 @@
-import { Flex, Input, Text, Checkbox, Button, Select } from "@chakra-ui/react";
+import { Flex, Input, Button, Select } from "@chakra-ui/react";
 import { Plus } from "phosphor-react";
+import { CheckboxGroup } from "./CheckboxGroup";
 
 interface HeadingProps {
 	filter?: boolean;
@@ -12,6 +13,9 @@ interface HeadingProps {
 	setShowAll: (showAll: boolean) => void;
 	buttonName: string;
 	onClickButton?: () => void;
+	inputs?: boolean;
+	showInputs?: boolean;
+	setShowInputs?: (showInputs: boolean) => void;
 }
 
 export function Heading({
@@ -22,9 +26,12 @@ export function Heading({
 	setSearch,
 	setShowAll,
 	showAll,
-	filter,
+	filter = false,
 	options,
 	setOption,
+	inputs = false,
+	showInputs = false,
+	setShowInputs,
 }: HeadingProps) {
 	return (
 		<Flex
@@ -37,7 +44,6 @@ export function Heading({
 			<Flex gap="1rem" direction={["column", "column", "column", "row", "row"]}>
 				{filter && (
 					<Select
-						placeholder=""
 						maxW="300px"
 						borderRadius="50px"
 						focusBorderColor="purple.400"
@@ -60,25 +66,19 @@ export function Heading({
 					onChange={() => setSearch}
 				/>
 
-				<Flex gap=".5rem">
-					<Checkbox
-						rounded="md"
-						colorScheme="purple"
-						size="lg"
-						isChecked={showAll}
-						onChange={() => setShowAll(!showAll)}
+				<CheckboxGroup
+					name="Mostrar todos"
+					checked={showAll}
+					setChecked={setShowAll}
+				/>
+
+				{inputs && (
+					<CheckboxGroup
+						name="Mostrar insumos"
+						checked={showInputs}
+						setChecked={()=>setShowInputs}
 					/>
-					<Flex
-						alignItems="center"
-						gap=".3rem"
-						cursor="pointer"
-						onClick={() => setShowAll(!showAll)}
-					>
-						<Text w="max-content" display="block">
-							Mostrar todos
-						</Text>
-					</Flex>
-				</Flex>
+				)}
 			</Flex>
 
 			<Button

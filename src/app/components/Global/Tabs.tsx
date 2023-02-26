@@ -14,9 +14,9 @@ import { ProductsView } from "../../views/Products";
 
 export function AppTabs() {
 	const TabNames = [
-		"Contas",
 		"Produtos",
 		"Grupos",
+		"Contas",
 		"Observações",
 		"Local de impressão",
 	];
@@ -30,6 +30,7 @@ export function AppTabs() {
 							key={item}
 							maxWidth="max-content"
 							color="white"
+							transition="none"
 							fontWeight={500}
 							width="200px"
 							_selected={{
@@ -45,15 +46,15 @@ export function AppTabs() {
 
 				<TabPanels>
 					<TabPanel>
-						<InvoicesView />
-					</TabPanel>
-
-					<TabPanel>
 						<ProductsView />
 					</TabPanel>
 
 					<TabPanel>
 						<GroupsView />
+					</TabPanel>
+
+					<TabPanel>
+						<InvoicesView />
 					</TabPanel>
 
 					<TabPanel>

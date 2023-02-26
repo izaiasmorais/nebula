@@ -3,8 +3,8 @@ import { useInvoice } from "../../store/Invoices/useInvoice";
 import { usePagination } from "../../store/usePagination";
 import { InvoicesHeading } from "../features/Invoices/InvoicesHeading";
 import { InvoiceModal } from "../features/Invoices/Modal/InvoiceModal";
-import { InvoiceTableHeader } from "../features/Invoices/InvoiceTableHeader";
-import { InvoiceTableItem } from "../features/Invoices/InvoiceTableItem";
+import { InvoicesTableHeader } from "../features/Invoices/InvoicesTableHeader";
+import { InvoicesTableItem } from "../features/Invoices/InvoicesTableItem";
 import { Pagination } from "../components/Pagination/Pagination";
 
 export function InvoicesView() {
@@ -26,12 +26,12 @@ export function InvoicesView() {
 			<InvoicesHeading />
 
 			<Flex direction="column" overflow="auto">
-				<InvoiceTableHeader />
+				<InvoicesTableHeader />
 			</Flex>
 
 			<Flex direction="column" overflow="auto" overflowY="hidden">
 				{invoicesData?.map((i) => (
-					<InvoiceTableItem
+					<InvoicesTableItem
 						key={i.id}
 						id={i.id}
 						installments={i.installments}

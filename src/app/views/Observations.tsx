@@ -1,4 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
+import { ObservationsHeading } from "../features/Observations/ObservationsHeading";
+import { ObservationsTableHeader } from "../features/Observations/ObservationsTableHeader";
 
 export function ObservationsView() {
 	return (
@@ -10,9 +12,9 @@ export function ObservationsView() {
 			borderRadius="0 0 1rem 1rem"
 			p={["1.5rem", "2rem", "2.5rem"]}
 		>
-			<Text fontSize="2xl" fontWeight={500}>
-				Observations
-			</Text>
+			<ObservationsHeading />
+
+			<ObservationsTableHeader />
 		</Flex>
 	);
 }

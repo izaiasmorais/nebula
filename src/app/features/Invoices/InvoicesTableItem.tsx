@@ -8,9 +8,9 @@ import {
 	EditButton,
 } from "../../components/Global/CustomButtons";
 
-interface InvoiceTableItemProps extends InvoiceType {}
+interface InvoicesTableItemProps extends InvoiceType {}
 
-export function InvoiceTableItem({
+export function InvoicesTableItem({
 	value,
 	createAt,
 	dueDate,
@@ -18,7 +18,7 @@ export function InvoiceTableItem({
 	installments,
 	status,
 	title,
-}: InvoiceTableItemProps) {
+}: InvoicesTableItemProps) {
 	const { deleteInvoice } = useInvoice();
 
 	return (

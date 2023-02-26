@@ -1,5 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { ProductsHeading } from "../features/Products/ProductsHeading";
+import { ProductsTableHeader } from "../features/Products/ProductsTableHeader";
 
 export function ProductsView() {
 	return (
@@ -12,6 +13,7 @@ export function ProductsView() {
 			p={["1.5rem", "2rem", "2.5rem"]}
 		>
 			<ProductsHeading />
+			<ProductsTableHeader />
 		</Flex>
 	);
 }
