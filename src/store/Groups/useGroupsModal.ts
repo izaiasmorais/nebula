@@ -6,7 +6,7 @@ interface ModalStore {
 	onClose: () => void;
 }
 
-export const useInvoiceModal = create<ModalStore>((set) => ({
+export const useGroupsModal = create<ModalStore>((set) => ({
 	isOpen: false,
 	onOpen: () => set(() => ({ isOpen: true })),
 	onClose: () => set(() => ({ isOpen: false })),

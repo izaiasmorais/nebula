@@ -14,10 +14,10 @@ import { ProductsView } from "../../views/Products";
 
 export function AppTabs() {
 	const TabNames = [
-		"Produtos",
 		"Grupos",
-		"Contas",
+		"Produtos",
 		"Observações",
+		"Contas",
 		"Local de impressão",
 	];
 
@@ -46,19 +46,19 @@ export function AppTabs() {
 
 				<TabPanels>
 					<TabPanel>
-						<ProductsView />
-					</TabPanel>
-
-					<TabPanel>
 						<GroupsView />
 					</TabPanel>
 
 					<TabPanel>
-						<InvoicesView />
+						<ProductsView />
 					</TabPanel>
 
 					<TabPanel>
 						<ObservationsView />
+					</TabPanel>
+
+					<TabPanel>
+						<InvoicesView />
 					</TabPanel>
 
 					<TabPanel>

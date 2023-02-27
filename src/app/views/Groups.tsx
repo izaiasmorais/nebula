@@ -1,6 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import { GroupsHeading } from "../features/Groups/GroupsHeading";
 import { GroupsTableHeader } from "../features/Groups/GroupsTableaHeader";
+import { GroupsModal } from "../features/Groups/Modal/GroupsModal";
 
 export function GroupsView() {
 	return (
@@ -14,6 +15,7 @@ export function GroupsView() {
 		>
 			<GroupsHeading />
 			<GroupsTableHeader />
+			<GroupsModal />
 		</Flex>
 	);
 }

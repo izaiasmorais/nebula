@@ -5,7 +5,7 @@ interface FormFieldProps extends InputProps {
 	placeholder?: string;
 }
 
-export function InvoiceModalField({
+export function ModalField({
 	name,
 	placeholder,
 	...rest

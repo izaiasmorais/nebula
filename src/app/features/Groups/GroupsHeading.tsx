@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { useInvoiceModal } from "../../../store/Invoices/useInvoiceModal";
+import { useGroupsModal } from "../../../store/Groups/useGroupsModal";
 import { Heading } from "../../components/Global/Heading";
 
 export function GroupsHeading() {
 	const [showAll, setShowAll] = useState(false);
-	const { onOpen } = useInvoiceModal();
+	const { onOpen } = useGroupsModal();
 
 	return (
 		<Heading

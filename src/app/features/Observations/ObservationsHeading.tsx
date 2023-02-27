@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { useInvoiceModal } from "../../../store/Invoices/useInvoiceModal";
+import { useInvoicesModal } from "../../../store/Invoices/useInvoicesModal";
 import { Heading } from "../../components/Global/Heading";
 
 export function ObservationsHeading() {
 	const [showAll, setShowAll] = useState(false);
-	const { onOpen } = useInvoiceModal();
+	const { onOpen } = useInvoicesModal();
 
 	return (
 		<Heading
