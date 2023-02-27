@@ -11,6 +11,7 @@ import { InvoicesView } from "../../views/Invoices";
 import { ObservationsView } from "../../views/Observations";
 import { PrintingLocationView } from "../../views/PritingLocation";
 import { ProductsView } from "../../views/Products";
+import { ProductTypeView } from "../../views/ProductTypeView";
 
 export function AppTabs() {
 	const TabNames = [
@@ -19,12 +20,13 @@ export function AppTabs() {
 		"Observações",
 		"Contas",
 		"Local de impressão",
+		"Tipo de produto",
 	];
 
 	return (
 		<Flex>
 			<Tabs variant="enclosed" border="transparent">
-				<TabList w="700px" gap="1rem" ml="1rem" mb="-1rem" h="50px">
+				<TabList w="850px" gap="1rem" ml="1rem" mb="-1rem" h="50px">
 					{TabNames.map((item) => (
 						<Tab
 							key={item}
@@ -63,6 +65,10 @@ export function AppTabs() {
 
 					<TabPanel>
 						<PrintingLocationView />
+					</TabPanel>
+
+					<TabPanel>
+						<ProductTypeView />
 					</TabPanel>
 				</TabPanels>
 			</Tabs>
