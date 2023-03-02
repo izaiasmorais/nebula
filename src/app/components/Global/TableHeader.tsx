@@ -1,4 +1,4 @@
-import { Flex, SimpleGrid, SimpleGridProps } from "@chakra-ui/react";
+import { SimpleGrid, SimpleGridProps } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 interface TableHeaderProps extends SimpleGridProps {

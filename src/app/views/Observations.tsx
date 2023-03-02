@@ -1,6 +1,7 @@
 import { Flex, Text } from "@chakra-ui/react";
 import { ObservationsHeading } from "../features/Observations/ObservationsHeading";
 import { ObservationsTableHeader } from "../features/Observations/ObservationsTableHeader";
+import { ObservationsTableItem } from "../features/Observations/ObservationsTableItem";
 
 export function ObservationsView() {
 	return (
@@ -15,6 +16,10 @@ export function ObservationsView() {
 			<ObservationsHeading />
 
 			<ObservationsTableHeader />
+
+			<ObservationsTableItem />
+			<ObservationsTableItem />
+			<ObservationsTableItem />
 		</Flex>
 	);
 }

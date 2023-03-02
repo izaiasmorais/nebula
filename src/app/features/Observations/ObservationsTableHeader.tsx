@@ -6,7 +6,7 @@ export function ObservationsTableHeader() {
 		<TableHeader gridTemplateColumns="repeat(8, 1fr)">
 			<Flex gridColumn="1 / 7">Título</Flex>
 			<Flex>Status</Flex>
-			<Flex>Editar</Flex>
+			<Flex></Flex>
 		</TableHeader>
 	);
 }

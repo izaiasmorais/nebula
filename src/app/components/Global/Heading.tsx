@@ -41,7 +41,7 @@ export function Heading({
 			direction={["column", "row", "row"]}
 			justifyContent="space-between"
 		>
-			<Flex gap="1rem" maxW="1000px" w="full">
+			<Flex gap="1rem" maxW="900px" w="full">
 				{filter && (
 					<Select
 						maxW="200px"
@@ -77,7 +77,7 @@ export function Heading({
 					<CheckboxGroup
 						name="Mostrar insumos"
 						checked={showInputs}
-						setChecked={()=>setShowInputs}
+						setChecked={() => setShowInputs}
 					/>
 				)}
 			</Flex>

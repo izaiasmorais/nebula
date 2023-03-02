@@ -1,4 +1,4 @@
-import { Flex, SimpleGrid } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { InvoiceType } from "../../../@types/types";
 import { useInvoice } from "../../../store/Invoices/useInvoice";
 import { formatDate } from "../../../utils/formatDate";
@@ -7,6 +7,7 @@ import {
 	DeleteButton,
 	EditButton,
 } from "../../components/Global/CustomButtons";
+import { TableItem } from "../../components/Global/TableItem";
 
 interface InvoicesTableItemProps extends InvoiceType {}
 
@@ -22,15 +23,7 @@ export function InvoicesTableItem({
 	const { deleteInvoice } = useInvoice();
 
 	return (
-		<SimpleGrid
-			color="#959da8"
-			alignItems="center"
-			fontWeight="600"
-			p="1rem"
-			gap="2rem"
-			fontSize="14px"
-			gridTemplateColumns="repeat(8, 1fr)"
-		>
+		<TableItem>
 			<Flex w="250px">{title}</Flex>
 			<Flex w="130px">{formatDate(createAt)}</Flex>
 			<Flex w="130px">{formatDate(dueDate)}</Flex>
@@ -43,6 +36,6 @@ export function InvoicesTableItem({
 			<Flex>
 				<DeleteButton onClick={() => deleteInvoice(id)} />
 			</Flex>
-		</SimpleGrid>
+		</TableItem>
 	);
 }
