@@ -41,10 +41,10 @@ export function Heading({
 			direction={["column", "row", "row"]}
 			justifyContent="space-between"
 		>
-			<Flex gap="1rem" direction={["column", "column", "column", "row", "row"]}>
+			<Flex gap="1rem" maxW="1000px" w="full">
 				{filter && (
 					<Select
-						maxW="300px"
+						maxW="200px"
 						borderRadius="50px"
 						focusBorderColor="purple.400"
 						onChange={() => setOption}
@@ -59,7 +59,8 @@ export function Heading({
 
 				<Input
 					placeholder={searchPlaceholder}
-					maxW="300px"
+					maxW="400px"
+					w="full"
 					borderRadius="50px"
 					focusBorderColor="purple.400"
 					value={search}
