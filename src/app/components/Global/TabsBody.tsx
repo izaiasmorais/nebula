@@ -14,6 +14,7 @@ export function TabsBody({ children }: TabsBodProps) {
 			direction="column"
 			borderRadius="0 0 1rem 1rem"
 			p={["1.5rem", "2rem", "2.5rem"]}
+			justifyContent="space-between"
 		>
 			{children}
 		</Flex>

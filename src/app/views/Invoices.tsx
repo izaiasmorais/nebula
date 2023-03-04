@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
 import { useInvoice } from "../../store/Invoices/useInvoice";
-import { usePagination } from "../../store/usePagination";
+import { useInvoicesPagination } from "../../store/Invoices/useInvoicesPagination";
 import { InvoicesHeading } from "../features/Invoices/InvoicesHeading";
 import { InvoiceModal } from "../features/Invoices/Modal/InvoiceModal";
 import { InvoicesTableHeader } from "../features/Invoices/InvoicesTableHeader";
@@ -10,7 +10,7 @@ import { TabsBody } from "../components/Global/TabsBody";
 
 export function InvoicesView() {
 	const { invoices } = useInvoice();
-	const { page, itemsPerPage, onChangePage } = usePagination();
+	const { page, itemsPerPage, onChangePage } = useInvoicesPagination();
 
 	const firstIndex = (page - 1) * itemsPerPage;
 	const lastIndex = page * itemsPerPage;

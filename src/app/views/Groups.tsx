@@ -1,6 +1,6 @@
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { useGroup } from "../../store/Groups/useGroup";
-import { usePagination } from "../../store/usePagination";
+import { useGroupsPagination } from "../../store/Groups/useGroupsPagination";
 import { TabsBody } from "../components/Global/TabsBody";
 import { Pagination } from "../components/Pagination/Pagination";
 import { GroupsHeading } from "../features/Groups/GroupsHeading";
@@ -10,37 +10,47 @@ import { GroupsModal } from "../features/Groups/Modal/GroupsModal";
 
 export function GroupsView() {
 	const { groups } = useGroup();
-	const { page, itemsPerPage, onChangePage } = usePagination();
+	const { page, itemsPerPage, onChangePage, onChangeItemsPerPage } = useGroupsPagination();
 
-	const firstIndex = (page - 1) * 7;
-	const lastIndex = page * 7;
+	const firstIndex = (page - 1) * itemsPerPage;
+	const lastIndex = page * itemsPerPage;
 	const groupsData = groups.slice(firstIndex, lastIndex);
 
 	return (
-		<TabsBody>
-			<GroupsHeading />
+		<>
+			<TabsBody>
+				<Box>
+					<GroupsHeading />
 
-			<GroupsTableHeader />
+					<GroupsTableHeader />
 
-			{groupsData.map((group) => (
-				<GroupsTableItem
-					key={group.id}
-					name={group.name}
-					priting={group.printingLocation}
-					status={group.status}
-				/>
-			))}
+					<Flex
+						direction="column"
+						overflow="auto"
+						overflowY="hidden"
+						// maxH="400px"
+					>
+						{groupsData.map((group) => (
+							<GroupsTableItem
+								key={group.id}
+								name={group.name}
+								priting={group.printingLocation}
+								status={group.status}
+							/>
+						))}
+					</Flex>
+				</Box>
 
-			<Flex mt="4rem">
 				<Pagination
 					currentPage={page}
-					itemsPerPage={10}
+					itemsPerPage={itemsPerPage}
 					onChangePage={onChangePage}
 					totalItems={groups.length}
+					onChangeItemsPerPage={onChangeItemsPerPage}
 				/>
-			</Flex>
+			</TabsBody>
 
 			<GroupsModal />
-		</TabsBody>
+		</>
 	);
 }

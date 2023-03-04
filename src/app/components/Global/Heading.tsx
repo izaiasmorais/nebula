@@ -1,6 +1,7 @@
 import { Flex, Input, Button, Select } from "@chakra-ui/react";
 import { Plus } from "phosphor-react";
 import { CheckboxGroup } from "./CheckboxGroup";
+import { AddButton, TutorialButton } from "./CustomButtons";
 
 interface HeadingProps {
 	filter?: boolean;
@@ -35,7 +36,6 @@ export function Heading({
 }: HeadingProps) {
 	return (
 		<Flex
-			mt="2rem"
 			gap="1rem"
 			w="full"
 			direction={["column", "row", "row"]}
@@ -82,15 +82,10 @@ export function Heading({
 				)}
 			</Flex>
 
-			<Button
-				colorScheme="purple"
-				borderRadius="50px"
-				leftIcon={<Plus size={20} />}
-				onClick={onClickButton}
-				data-testid="add-invoice-button"
-			>
-				{buttonName}
-			</Button>
+			<Flex gap="1rem">
+				<TutorialButton />
+				<AddButton onClick={onClickButton}>{buttonName}</AddButton>
+			</Flex>
 		</Flex>
 	);
 }

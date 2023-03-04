@@ -7,6 +7,7 @@ interface PaginationProps {
 	itemsPerPage: number;
 	currentPage: number;
 	onChangePage: (page: number) => void;
+	onChangeItemsPerPage: (items: number) => void;
 }
 
 export function Pagination({
@@ -14,6 +15,7 @@ export function Pagination({
 	itemsPerPage,
 	currentPage,
 	onChangePage,
+	onChangeItemsPerPage,
 }: PaginationProps) {
 	const totalPages = Math.ceil(totalItems / itemsPerPage);
 
@@ -49,14 +51,19 @@ export function Pagination({
 
 	return (
 		<Flex w="full" justify="space-between">
-			<Text>
-				<Select>
-					<option value="">Itens por página</option>
-					<option value="">5</option>
-					<option value="">10</option>
-					<option value="">15</option>
+			<Flex w="230px" gap="1rem" align="center">
+				<Text>Itens por página:</Text>
+
+				<Select
+					maxW="80px"
+					placeholder={String(itemsPerPage)}
+					onChange={(e) => onChangeItemsPerPage(Number(e.target.value))}
+				>
+					<option value={5}>5</option>
+					<option value={10}>10</option>
+					<option value={15}>15</option>
 				</Select>
-			</Text>
+			</Flex>
 
 			<Flex gap="2">
 				{currentPage >= 1 && (

@@ -1,7 +1,10 @@
 import { Button, ButtonProps } from "@chakra-ui/react";
-import { PencilSimple, Trash } from "phosphor-react";
+import { PencilSimple, Plus, Trash, YoutubeLogo } from "phosphor-react";
+import { ReactNode } from "react";
 
-interface CustomButtonProps extends ButtonProps {}
+interface CustomButtonProps extends ButtonProps {
+	children?: ReactNode;
+}
 
 export function EditButton({ ...rest }: CustomButtonProps) {
 	return (
@@ -29,5 +32,33 @@ export function DeleteButton({ ...rest }: CustomButtonProps) {
 			leftIcon={<Trash size={20} />}
 			{...rest}
 		/>
+	);
+}
+
+export function AddButton({ children, ...rest }: CustomButtonProps) {
+	return (
+		<Button
+			colorScheme="purple"
+			borderRadius="50px"
+			leftIcon={<Plus size={20} />}
+			data-testid="add-invoice-button"
+			{...rest}
+		>
+			{children}
+		</Button>
+	);
+}
+
+export function TutorialButton({ ...rest }: CustomButtonProps) {
+	return (
+		<Button
+			colorScheme="red"
+			borderRadius="50px"
+			leftIcon={<YoutubeLogo size={20} />}
+			data-testid="add-invoice-button"
+			{...rest}
+		>
+			Ver toturial
+		</Button>
 	);
 }

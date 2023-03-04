@@ -7,7 +7,7 @@ interface PaginationStore {
 	onChangeItemsPerPage: (page: number) => void;
 }
 
-export const usePagination = create<PaginationStore>((set) => ({
+export const useInvoicesPagination = create<PaginationStore>((set) => ({
 	page: 1,
 	itemsPerPage: 5,
 	onChangePage(page: number) {
