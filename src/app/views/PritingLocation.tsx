@@ -1,12 +1,38 @@
-import {Text } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { TabsBody } from "../components/Global/TabsBody";
+import { PritingLocationTableHeader } from "../features/PritingLocation/PritingLocationTableHeader";
+import { PritingLocationTableItem } from "../features/PritingLocation/PritingLocationTableItem";
 
 export function PrintingLocationView() {
 	return (
 		<TabsBody>
-			<Text fontSize="2xl" fontWeight={500}>
-				Local de Impressão
-			</Text>
+			<Flex direction="column" gap=".5rem">
+				<PritingLocationTableHeader />
+
+				<PritingLocationTableItem
+					name="Bar"
+					faber="Bematech"
+					model="MP-4200-TH"
+					comunication="Rede"
+					active={true}
+				/>
+
+				<PritingLocationTableItem
+					name="Bar"
+					faber="Bematech"
+					model="MP-4200-TH"
+					comunication="Rede"
+					active={true}
+				/>
+
+				<PritingLocationTableItem
+					name="Bar"
+					faber="Bematech"
+					model="MP-4200-TH"
+					comunication="Rede"
+					active={true}
+				/>
+			</Flex>
 		</TabsBody>
 	);
 }
