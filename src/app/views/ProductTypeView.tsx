@@ -1,6 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
-import { ProductsHeading } from "../features/Products/ProductsHeading";
-import { ProductsTableHeader } from "../features/Products/ProductsTableHeader";
+import { Flex } from "@chakra-ui/react";
 
 export function ProductTypeView() {
 	return (
