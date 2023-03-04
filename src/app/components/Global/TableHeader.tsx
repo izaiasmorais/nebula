@@ -16,7 +16,6 @@ export function TableHeader({ children, ...rest }: TableHeaderProps) {
 			alignItems="center"
 			borderRadius=".5rem"
 			fontWeight="600"
-			fontSize="14px"
 			color="black"
 			overflow="auto"
 			overflowY="hidden"

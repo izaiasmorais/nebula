@@ -7,3 +7,10 @@ export interface InvoiceType {
 	installments: number;
 	status: string;
 }
+
+export interface GroupType {
+	id: string;
+	name: string;
+	printingLocation: string;
+	status: boolean;
+}

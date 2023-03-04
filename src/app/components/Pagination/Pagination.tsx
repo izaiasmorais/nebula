@@ -1,6 +1,6 @@
 import { PaginationButton } from "./PaginationButton";
 import { CaretRight, CaretLeft } from "phosphor-react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Select, Text } from "@chakra-ui/react";
 
 interface PaginationProps {
 	totalItems: number;
@@ -50,7 +50,12 @@ export function Pagination({
 	return (
 		<Flex w="full" justify="space-between">
 			<Text>
-				Página: {currentPage} / {totalPages}
+				<Select>
+					<option value="">Itens por página</option>
+					<option value="">5</option>
+					<option value="">10</option>
+					<option value="">15</option>
+				</Select>
 			</Text>
 
 			<Flex gap="2">

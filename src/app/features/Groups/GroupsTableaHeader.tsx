@@ -3,12 +3,11 @@ import { TableHeader } from "../../components/Global/TableHeader";
 
 export function GroupsTableHeader() {
 	return (
-		<TableHeader gridTemplateColumns="repeat(5, 1fr)">
-			<Flex>Nome</Flex>
-			<Flex>Modelo</Flex>
-			<Flex>Local impressão</Flex>
+		<TableHeader gridTemplateColumns="repeat(6, 1fr)">
+			<Flex gridColumn="1 / 3">Nome</Flex>
+			<Flex gridColumn="3 / 5">Local impressão</Flex>
 			<Flex>Status</Flex>
-			<Flex>Editar</Flex>
+			<Flex></Flex>
 		</TableHeader>
 	);
 }

@@ -13,7 +13,7 @@ export function TableItem({ children, ...rest }: TableItemProps) {
 			fontWeight="600"
 			p=".5rem 1rem"
 			gap="2rem"
-			fontSize="14px"
+			
 			gridTemplateColumns="repeat(8, 1fr)"
 			{...rest}
 		>

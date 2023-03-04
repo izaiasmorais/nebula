@@ -1,29 +1,27 @@
 import { faker } from "@faker-js/faker";
-import { InvoiceType } from "../@types/types";
+import { GroupType } from "../@types/types";
 
-const generateInvoice = (): InvoiceType => ({
+const generateGroup = (): GroupType => ({
 	id: faker.datatype.uuid(),
-	title: faker.finance.accountName(),
-	createAt: faker.date.past(),
-	dueDate: faker.date.future(),
-	value: parseFloat(faker.finance.amount(100, 10000, 2)),
-	installments: faker.datatype.number({ min: 1, max: 12 }),
-	status: faker.helpers.arrayElement([
-		"paid",
-		"unpaid",
-		"postponed",
-		"overdue",
+	name: faker.helpers.arrayElement([
+		"Bebidas",
+		"Pizza",
+		"Cervejas",
+		"Porção",
+		"Promoção",
 	]),
+	printingLocation: faker.helpers.arrayElement(["Bar", "Cozinha", "Pizzaria"]),
+	status: faker.datatype.boolean(),
 });
 
-const generateInvoices = (count: number): InvoiceType[] => {
-	const invoices: InvoiceType[] = [];
+const generateGroups = (count: number): GroupType[] => {
+	const Groups: GroupType[] = [];
 
 	for (let i = 0; i < count; i++) {
-		invoices.push(generateInvoice());
+		Groups.push(generateGroup());
 	}
 
-	return invoices;
+	return Groups;
 };
 
-export const invoices: InvoiceType[] = generateInvoices(500);
+export const groups: GroupType[] = generateGroups(500);

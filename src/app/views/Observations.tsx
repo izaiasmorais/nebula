@@ -1,18 +1,12 @@
 import { Flex, Text } from "@chakra-ui/react";
+import { TabsBody } from "../components/Global/TabsBody";
 import { ObservationsHeading } from "../features/Observations/ObservationsHeading";
 import { ObservationsTableHeader } from "../features/Observations/ObservationsTableHeader";
 import { ObservationsTableItem } from "../features/Observations/ObservationsTableItem";
 
 export function ObservationsView() {
 	return (
-		<Flex
-			bg="white"
-			h="720px"
-			w="1268px"
-			direction="column"
-			borderRadius="0 0 1rem 1rem"
-			p={["1.5rem", "2rem", "2.5rem"]}
-		>
+		<TabsBody>
 			<ObservationsHeading />
 
 			<ObservationsTableHeader />
@@ -20,6 +14,6 @@ export function ObservationsView() {
 			<ObservationsTableItem />
 			<ObservationsTableItem />
 			<ObservationsTableItem />
-		</Flex>
+		</TabsBody>
 	);
 }
