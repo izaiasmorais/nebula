@@ -10,7 +10,8 @@ import { GroupsModal } from "../features/Groups/Modal/GroupsModal";
 
 export function GroupsView() {
 	const { groups } = useGroup();
-	const { page, itemsPerPage, onChangePage, onChangeItemsPerPage } = useGroupsPagination();
+	const { page, itemsPerPage, onChangePage, onChangeItemsPerPage } =
+		useGroupsPagination();
 
 	const firstIndex = (page - 1) * itemsPerPage;
 	const lastIndex = page * itemsPerPage;

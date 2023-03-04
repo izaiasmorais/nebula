@@ -1,7 +1,5 @@
-import { Flex, Input, Button, Select } from "@chakra-ui/react";
-import { Plus } from "phosphor-react";
+import { Flex, Input, Select } from "@chakra-ui/react";
 import { CheckboxGroup } from "./CheckboxGroup";
-import { AddButton, TutorialButton } from "./CustomButtons";
 
 interface HeadingProps {
 	filter?: boolean;
@@ -12,16 +10,12 @@ interface HeadingProps {
 	setSearch?: (search: string) => void;
 	showAll: boolean;
 	setShowAll: (showAll: boolean) => void;
-	buttonName: string;
-	onClickButton?: () => void;
 	inputs?: boolean;
 	showInputs?: boolean;
 	setShowInputs?: (showInputs: boolean) => void;
 }
 
 export function Heading({
-	buttonName,
-	onClickButton,
 	search,
 	searchPlaceholder,
 	setSearch,
@@ -80,11 +74,6 @@ export function Heading({
 						setChecked={() => setShowInputs}
 					/>
 				)}
-			</Flex>
-
-			<Flex gap="1rem">
-				<TutorialButton />
-				<AddButton onClick={onClickButton}>{buttonName}</AddButton>
 			</Flex>
 		</Flex>
 	);
