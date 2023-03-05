@@ -1,8 +1,8 @@
 <h1 align='center'>
-   💰 EZInvoice
+   💰 EZSprint
 </h1>
 
-![image](https://user-images.githubusercontent.com/53953937/220130565-e0cc1ab6-f8c0-4532-8071-80e306e4af2d.png)
+![image](https://user-images.githubusercontent.com/53953937/222932658-c9a957c9-d955-4de5-8275-2b24a530db3c.png)
 
 <div>
 <img src="https://img.shields.io/static/v1?label=LICENSE&message=MIT&color=805AD5&style=for-the-badge"/> <img src="https://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=805AD5&style=for-the-badge"/> <img src="https://img.shields.io/static/v1?label=NODE&message=V16.15.0&color=805AD5&style=for-the-badge"/>
