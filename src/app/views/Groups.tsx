@@ -1,8 +1,8 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { useGroup } from "../../store/Groups/useGroup";
 import { useGroupsPagination } from "../../store/Groups/useGroupsPagination";
+import { Pagination } from "../components/Global/Pagination";
 import { TabsBody } from "../components/Global/TabsBody";
-import { Pagination } from "../components/Pagination/Pagination";
 import { GroupsHeading } from "../features/Groups/GroupsHeading";
 import { GroupsTableHeader } from "../features/Groups/GroupsTableaHeader";
 import { GroupsTableItem } from "../features/Groups/GroupsTableItem";

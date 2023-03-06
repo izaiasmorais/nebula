@@ -5,8 +5,9 @@ import { InvoicesHeading } from "../features/Invoices/InvoicesHeading";
 import { InvoiceModal } from "../features/Invoices/Modal/InvoiceModal";
 import { InvoicesTableHeader } from "../features/Invoices/InvoicesTableHeader";
 import { InvoicesTableItem } from "../features/Invoices/InvoicesTableItem";
-import { Pagination } from "../components/Pagination/Pagination";
+
 import { TabsBody } from "../components/Global/TabsBody";
+import { Pagination } from "../components/Global/Pagination";
 
 export function InvoicesView() {
 	const { invoices } = useInvoice();

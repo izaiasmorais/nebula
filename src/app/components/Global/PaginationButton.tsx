@@ -7,13 +7,12 @@ interface PaginationButtonProps extends ButtonProps {
 
 export function PaginationButton({
 	children,
-
 	...rest
 }: PaginationButtonProps) {
 	return (
 		<Button
 			bgColor="slate.200"
-			_hover={{ bgColor: "slate.300" }}
+			_hover={{ backgroundColor: "slate.900" }}
 			height="8"
 			width="43px"
 			borderRadius="md"

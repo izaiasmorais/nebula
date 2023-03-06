@@ -9,7 +9,7 @@ export function GroupsHeading() {
 	const { onOpen } = useGroupsModal();
 
 	return (
-		<Flex direction="column" gap="1rem">
+		<Flex direction="column" gap="2rem">
 			<Center
 				description={
 					<p>

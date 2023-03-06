@@ -1,7 +1,7 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { useObservationsPagination } from "../../store/Observations/useObservationsPagination";
+import { Pagination } from "../components/Global/Pagination";
 import { TabsBody } from "../components/Global/TabsBody";
-import { Pagination } from "../components/Pagination/Pagination";
 import { ObservationsHeading } from "../features/Observations/ObservationsHeading";
 import { ObservationsTableHeader } from "../features/Observations/ObservationsTableHeader";
 import { ObservationsTableItem } from "../features/Observations/ObservationsTableItem";

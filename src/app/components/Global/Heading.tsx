@@ -31,6 +31,7 @@ export function Heading({
 	return (
 		<Flex
 			gap="1rem"
+			mb="1rem"
 			w="full"
 			direction={["column", "row", "row"]}
 			justifyContent="space-between"

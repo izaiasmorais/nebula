@@ -9,7 +9,6 @@ export function TableHeader({ children, ...rest }: TableHeaderProps) {
 	return (
 		<SimpleGrid
 			bg="#F1F5F9"
-			mt="2.5rem"
 			mb="1rem"
 			p="1rem"
 			gap="2rem"
