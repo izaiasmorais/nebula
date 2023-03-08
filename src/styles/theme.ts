@@ -7,16 +7,15 @@ export const theme = extendTheme({
 	},
 	styles: {
 		global: {
-			html: {
+			".container": {
 				"&::-webkit-scrollbar": {
-					width: "5px",
+					width: "3px",
 				},
 				"&::-webkit-scrollbar-track": {
-					background: "#000000",
+					background: "#F1F5F9",
 				},
 				"&::-webkit-scrollbar-thumb": {
-					background: "#293033",
-					borderRadius: "5px",
+					background: "#A2A6AB",
 				},
 			},
 		},

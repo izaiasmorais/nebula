@@ -9,7 +9,7 @@ interface PaginationStore {
 
 export const useInvoicesPagination = create<PaginationStore>((set) => ({
 	page: 1,
-	itemsPerPage: 8,
+	itemsPerPage: 5,
 	onChangePage(page: number) {
 		set(() => ({ page }));
 	},

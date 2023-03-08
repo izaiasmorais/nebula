@@ -1,6 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { useGroup } from "../../store/Groups/useGroup";
 import { useGroupsPagination } from "../../store/Groups/useGroupsPagination";
+import { ItemsList } from "../components/Global/List";
 import { Pagination } from "../components/Global/Pagination";
 import { TabsBody } from "../components/Global/TabsBody";
 import { GroupsHeading } from "../features/Groups/GroupsHeading";
@@ -25,12 +26,7 @@ export function GroupsView() {
 
 					<GroupsTableHeader />
 
-					<Flex
-						direction="column"
-						overflow="auto"
-						overflowY="hidden"
-						// maxH="400px"
-					>
+					<ItemsList>
 						{groupsData.map((group) => (
 							<GroupsTableItem
 								key={group.id}
@@ -39,7 +35,7 @@ export function GroupsView() {
 								status={group.status}
 							/>
 						))}
-					</Flex>
+					</ItemsList>
 				</Box>
 
 				<Pagination

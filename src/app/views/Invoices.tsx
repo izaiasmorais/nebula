@@ -5,9 +5,9 @@ import { InvoicesHeading } from "../features/Invoices/InvoicesHeading";
 import { InvoiceModal } from "../features/Invoices/Modal/InvoiceModal";
 import { InvoicesTableHeader } from "../features/Invoices/InvoicesTableHeader";
 import { InvoicesTableItem } from "../features/Invoices/InvoicesTableItem";
-
 import { TabsBody } from "../components/Global/TabsBody";
 import { Pagination } from "../components/Global/Pagination";
+import { ItemsList } from "../components/Global/List";
 
 export function InvoicesView() {
 	const { invoices } = useInvoice();
@@ -25,7 +25,7 @@ export function InvoicesView() {
 
 				<InvoicesTableHeader />
 
-				<Flex direction="column" overflow="auto" overflowY="hidden">
+				<ItemsList>
 					{invoicesData?.map((i) => (
 						<InvoicesTableItem
 							key={i.id}
@@ -38,7 +38,7 @@ export function InvoicesView() {
 							status={i.status}
 						/>
 					))}
-				</Flex>
+				</ItemsList>
 			</Box>
 
 			<Pagination

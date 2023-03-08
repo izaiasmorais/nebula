@@ -56,7 +56,7 @@ export function Pagination({
 
 				<Select
 					maxW="80px"
-					placeholder={String(itemsPerPage)}
+					defaultValue={itemsPerPage}
 					onChange={(e) => onChangeItemsPerPage(Number(e.target.value))}
 				>
 					<option value={5}>5</option>

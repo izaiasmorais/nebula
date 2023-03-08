@@ -9,15 +9,12 @@ export function TableHeader({ children, ...rest }: TableHeaderProps) {
 	return (
 		<SimpleGrid
 			bg="#F1F5F9"
-			mb="1rem"
 			p="1rem"
 			gap="2rem"
 			alignItems="center"
 			borderRadius=".5rem"
 			fontWeight="600"
 			color="black"
-			overflow="auto"
-			overflowY="hidden"
 			w="full"
 			{...rest}
 		>
