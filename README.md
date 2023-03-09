@@ -18,7 +18,7 @@ Uma aplicação que gerencia contas a serem pagas de forma completa, e utiliza d
 - [x] Gerenciamento de requisições e cache com React Query.
 - [ ] Gerenciamento completo de contas à pagar.
 - [ ] Testes automatizados com Jest e Testing Library.
-- [ ] Design responsivo.
+- [ ] Design responsivo completo.
 - [ ] Modo noturno.
 
 ## 🚀 Tecnologias
